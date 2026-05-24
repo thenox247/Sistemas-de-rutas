@@ -260,9 +260,8 @@ def calcular_tiempo(ruta):
 
 # interfaz
 
-print("\n================================")
+
 print(" SISTEMA INTELIGENTE DE RUTAS ")
-print("================================")
 
 print("\nEstaciones disponibles:")
 
@@ -278,6 +277,7 @@ destino = input(
 )
 
 # Validación
+
 if inicio not in grafo or destino not in grafo:
 
     print("\nError: Estación no encontrada.")
@@ -293,7 +293,7 @@ else:
 
         tiempo_total = calcular_tiempo(ruta)
 
-        print("\n===== RESULTADO =====")
+        print("\nRESULTADO")
         print("Mejor ruta encontrada:")
 
         print(" -> ".join(ruta))

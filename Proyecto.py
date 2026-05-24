@@ -162,7 +162,6 @@ tiempos = {
 
 def aplicar_reglas(origen, destino, costo):
 
-    # Regla 1: rutas congestionadas
     rutas_congestionadas = [
         ('Centro', 'Estadio'),
         ('Mercado', 'Centro'),
@@ -172,11 +171,9 @@ def aplicar_reglas(origen, destino, costo):
     if (origen, destino) in rutas_congestionadas:
         costo += 3
 
-    # Regla 2: prioridad hospitalaria
     if destino == 'Hospital':
         costo -= 1
 
-    # Regla 3: tráfico al aeropuerto
     if destino == 'Aeropuerto':
         costo += 2
 
